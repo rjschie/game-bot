@@ -1,0 +1,100 @@
+Dungeon Loop (all dungeons) [* number of dungeons] {
+  - Shuffle dungeon
+    - Baddies
+    - Modifiers
+
+  Round Loop [until all dungeon baddies are dead] {
+    - Players buy abilities with XP
+      - Algo? AI? Predetermined?
+    - Shuffle player decks
+
+    Draw Baddies Loop [* number of players] {
+      Baddy Extra count = 0
+      - Draw 1 baddy
+      - Draw 1 modifier
+      - Update state of baddy
+      - Update Baddy Extra count
+      - Search for Extra Baddies if necessary
+        - rats, cocka roaches
+      Baddy Extra Draw loop [* Baddy Extra count] {
+        - Baddy Extra count =- 1
+        - Draw 1 baddy
+        - Update Baddy Extra count
+      }
+    }
+
+    Battle Loop [until all drawn baddies are dead] {
+      - Players draw 3, shuffling as needed
+
+      Baddy Attack Loop [* number of baddies] {
+        - Baddy selects random player
+        - Baddy attempts damage to player
+        - Player optionally defends (AI opportunity?)
+        - Player receives damage = attack - defends
+        - If player receives damage, player receives state modifiers
+          - (poison, lose turn, etc.)
+      }
+
+      If No Players, break & reset Dungeon Loop
+
+      @Option1 (for simulated one-by-one play)
+      Player Attack Loop [* number of players] {
+        AttacksOnPlayers = n
+        AttackPoints = Attacks - AttacksOnPlayers
+
+        - If No turn, return
+        - If AttackPoints == 0, return
+
+        Attack Players Loop [* AttacksOnPlayers] {
+          - Select random player
+          - Attack player
+          - Target damage = attacks - defends
+        }
+
+        Attack Baddies Loop [until no more AttackPoints] {
+          - Player selects baddy
+            - based on algo. or AI?
+          - Player attempts damage to baddy
+            - spend as many attacks as possible
+          - Baddy defends
+          - Baddy damage = attacks - defends
+          - If Baddy receives damage, baddy receives state modifiers
+          - AttackPoints =- attacks spent
+
+          If Baddy dies {
+            - Divide experience among players
+          }
+        }
+      }
+
+      @Option2 (for simulated group decision)
+      Player Pooled Attack {
+        AttacksOnPlayers = n
+        AttackPoints = total attacks between players with turns
+        AttackPoints =- AttacksOnPlayers
+
+        Attack Players Loop [* AttacksOnPlayers] {
+          - Select random player
+          - Attack player
+          - Target damage = attacks - defends
+        }
+
+        Attack Baddies Loop [until no more AttackPoints] {
+          - Select baddy
+            - based on algo. or AI?
+          - Attempt damage to baddy
+            - spend as many attacks as possible
+          - Baddy defends
+          - Baddy damage = attacks - defends
+          - If Baddy receives damage, baddy receives state modifiers
+          - AttackPoints =- attacks spent
+
+          If Baddy dies {
+            - Divide experience among players
+          }
+        }
+      }
+    }
+  }
+}
+
