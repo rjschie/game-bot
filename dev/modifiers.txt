@@ -1,0 +1,54 @@
+Specials:
+Cauldron: If newt, Cauldron, and witch are in play, damage player to 1 health
+Nightmare: Spend all attacks on random hero
+Newt: +4 attack if witch is present; Poision if Cauldron is present
+
+
+Dungeon mod: Mobs are hidden & shuffled
+
+cannot defend
+cannot attack
+cannot be healed (players cannot be healed when Faerie in play)
+can counter attack
+lose turn
+after n turns, die
+card limit: only {?type} (base, defense, attack, special, heal)
+card limit: no {?type} (base, defense, attack, special, heal)
+card limit: need +1 base card for attack/defend
+card limit: +/- n cards to draw size
+card limit: discard hand, redraw 1*discarded cards
+card limit: hidden hand (play cards at random)
+
++n damage next n turns
++n damage every n turn
++n modifier
++n enemy
++n/+n {?damage type}
++n/+n next n turns 
++n/+n every n turns
++n/+n for other mobs
++n aggro
+immune to {damage type} (heal, base attack, ranged, specials)
+
+rand(2) chance to dodge
+
+on draw, deal n damage
+on draw, stop drawing {type} (modifiers, enemies)
+on draw, revive {n} discarded mobs
+on draw, find other in dungeon
+on draw, duplicate
+on no damage, revive mob
+on no damage, +n health
+on no damage, +n damage next turn
+on damage, destroy equipment
+on damage, shuffle into dungeon
+on damage, place on bottom of dungeon
+on damage, damager's next attack done to friendly
+on damage {? of type}, damager loses turn
+on death, replace with new mob
+on death, duplicate with half life
+on death, duplicate
+on death, revive n times
+on mob death, take modifier
+on mob death, +n/+n
+
