@@ -1,0 +1,32 @@
+Player Actions
+- purchase ability
+- take turn
+- draw
+- attack
+  - ranged/melee
+- defend
+- discard
+- dodge
+- move card between play areas
+
+Player state
+- health
+- xp
+- armor
+- drawn cards
+- disengaged
+
+Mob actions
+- take turn
+- attack
+  - ranged/melee
+- defend
+- dodge
+
+Mob state
+- in play
+- in deck
+  - position
+- attack power
+- health
+- armor

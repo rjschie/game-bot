@@ -1,0 +1,10 @@
+Things to gain metrics on:
+
+Life over course of dungeon
+XP over course of dungeon
+Attempts at dungeon
+XP gained in first n rounds of dungeon
+Deaths in first n rounds of dungeon
+Deaths over course of dungeon
+Time spent dead
+  - How much time other players continued after 1 player died
