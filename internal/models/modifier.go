@@ -1,7 +1,7 @@
 package models
 
+// Modifier .
 type Modifier struct {
-	NumberOfExtras  int
-	AttackModifier  int
-	DefenseModifier int
+	Name string
+	Type string
 }
