@@ -1,0 +1,67 @@
+What Didn't Work
+=================
+- Rogue seemed OP
+  - merchant gave ability to play more / cost less
+  - bag of tricks gave full deck access
+- Warrior died quickly
+  - no significant damage preventions
+- Merchant may have complicated things?
+  - spent whole game hiding (Ramon enjoyed that, did others?)
+  - no significant consistent ability to damage mobs
+  - great mob damage after lots of buildup
+- Shaman usefulness was unclear
+  - Summoning spirits wasn't quite working
+  - Things cost too much? (siphon life)
+  - No significant blocking?
+- Took too long to really get started with abilities
+- 10 or so rounds before we had good abilities
+  - increase start XP?
+- Dungeons 2 & 3 were very easy compared to 1
+- Dungeon 1 had too much mob management
+- Rogue was cleaning a lot up before melee classes could even act
+  - Made Warrior feel very useless
+
+
+What did work
+=================
+- Rogue was very useful
+  - ranged / melee abilities
+- Merchant was dodging a lot of damage
+- Dungeon 1 was very difficult
+  - May be due to number of mobs?
+- Ranged vs. Melee timing seems good
+
+
+Learnings
+================
+- Bring back "kill mob, boss gets XP"
+- Melee classes need ability to be interactive before mobs attack
+  ? More abilities that are "play anytime"
+  ? Change timing elements for mob attack
+- Attack/Defense need to scale with dungeons
+? Add more consistent health
+  - You always have same amount of health
+  - You have more ways to heal
+  - You rely on guarding your health, instead of increasing health (armor)
+
+
+Big Changeables
+================
+- Chance for miss from mob attacks
+- Change the attack order
+  ? Players attack first
+  ? Mobs attack in lanes, each hero deals with their own mob lane
+  ? Mobs attack in lanes, and each hero can choose to 
+    fight them or save for other lane
+- Attacked mob moves in front of player for 1v1 combat
+
+
+Other Card Changes
+================
+- Bag of tricks
+  - lvl 1: costs 2xp, goes back into purchase pile
+  - lvl 2: costs 5xp, goes back into deck
+  - lvl 3: costs 8px, goes ?
+- In Hide: can play all cards except attack/defend
+- Siphon Life: change cost
+- Herbs: heals 3 life, then 1 every 3 turns
