@@ -1,32 +1,51 @@
+Global Actions
+- take turn
+- attack
+- defend
+- dodge
+- specify target's next attack
+- target for attack
+  - multiple enemies
+- move card between play areas
+  - discard
+  - steal
+  - find/add modifier
+  - find/add creature
+- counter attack
+  - just attack/defend combo?
+- duplicate card
+
+Global State
+- in play / dead
+- health
+- armor
+- attack power bonus
+- aggro
+
+------------
+------------
+
 Player Actions
 - purchase ability
-- take turn
 - draw
-- attack
-  - ranged/melee
-- defend
 - discard
-- dodge
-- move card between play areas
+- equip
+  - only 1 named at a time
 
 Player state
-- health
 - xp
-- armor
 - drawn cards
+- equipments
 - disengaged
 
+------------
+------------
+
 Mob actions
-- take turn
-- attack
-  - ranged/melee
-- defend
-- dodge
+- ?
 
 Mob state
-- in play
-- in deck
-  - position
+- play area
+  - position in deck
+  - in player control?
 - attack power
-- health
-- armor

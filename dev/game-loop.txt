@@ -1,7 +1,8 @@
 Dungeon Loop (all dungeons) [* number of dungeons] {
-  - Shuffle dungeon
-    - Baddies
-    - Modifiers
+  - Populate mob deck
+  - Populate mod. deck
+  - Shuffle mob deck
+  - Shuffle mod. deck
 
   Round Loop [until all dungeon baddies are dead] {
     - Players buy abilities with XP
