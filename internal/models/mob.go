@@ -7,10 +7,16 @@ type Mob struct {
 	Attack    int
 	XP        int
 	Modifiers []Modifier
-	// Ability func(m *Mob) *Mob
+	Ability   func()
 }
 
 // UseAbility .
-// func (m *Mob) UseAbility() *Mob {
-// 	return m.Ability(m)
-// }
+func (m Mob) UseAbility() {
+	if m.Ability != nil {
+		m.Ability()
+	}
+}
+
+func (m Mob) String() string {
+	return m.Name
+}

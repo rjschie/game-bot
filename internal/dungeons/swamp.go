@@ -1,6 +1,10 @@
 package dungeons
 
 import (
+	"math/rand"
+	"time"
+
+	"github.com/fatih/color"
 	mdl "github.com/rjschie/gamebot/internal/models"
 )
 
@@ -16,6 +20,9 @@ func NewSwamp() *mdl.Dungeon {
 
 	s.ShuffleMobs()
 	s.ShuffleModifiers()
+
+	rand.Seed(time.Now().UTC().UnixNano())
+	s.CurrentBoss = s.Bosses[rand.Intn(len(s.Bosses))]
 
 	return s
 }
@@ -91,31 +98,49 @@ func addModifiers(s *mdl.Dungeon) {
 	appendModifier(s, 5, mdl.Modifier{
 		Name: "Reinforcements",
 		Type: "Encounter",
+		Ability: func() {
+			s.DrawMob()
+		},
 	})
 
 	appendModifier(s, 1, mdl.Modifier{
 		Name: "Trip Wire",
 		Type: "Encounter",
+		Ability: func() {
+			color.HiRed("You got tripped\n\n")
+		},
 	})
 
 	appendModifier(s, 1, mdl.Modifier{
 		Name: "Spider Web",
 		Type: "Encounter",
+		Ability: func() {
+			color.HiRed("You got webbed\n\n")
+		},
 	})
 
 	appendModifier(s, 1, mdl.Modifier{
 		Name: "Spikes",
 		Type: "Encounter",
+		Ability: func() {
+			color.HiRed("You got spiked\n\n")
+		},
 	})
 
 	appendModifier(s, 1, mdl.Modifier{
 		Name: "Pile o' Poo",
 		Type: "Encounter",
+		Ability: func() {
+			color.HiRed("You got poo'd\n\n")
+		},
 	})
 
 	appendModifier(s, 1, mdl.Modifier{
 		Name: "Cave-in",
 		Type: "Encounter",
+		Ability: func() {
+			color.HiRed("A Cave-in occurrs\n\n")
+		},
 	})
 
 	appendModifier(s, 3, mdl.Modifier{
