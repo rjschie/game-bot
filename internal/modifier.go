@@ -1,4 +1,4 @@
-package models
+package gamebot
 
 // Modifier .
 type Modifier struct {
@@ -8,7 +8,7 @@ type Modifier struct {
 }
 
 // UseAbility .
-func (m *Modifier) UseAbility() {
+func (m Modifier) UseAbility() {
 	if m.Ability != nil {
 		m.Ability()
 	}

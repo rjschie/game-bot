@@ -1,4 +1,4 @@
-package models
+package gamebot
 
 import (
 	"math/rand"

@@ -1,4 +1,4 @@
-package models
+package gamebot
 
 // Mob .
 type Mob struct {
@@ -7,13 +7,13 @@ type Mob struct {
 	Attack    int
 	XP        int
 	Modifiers []Modifier
-	Ability   func()
+	Ability   func(*Context)
 }
 
 // UseAbility .
-func (m Mob) UseAbility() {
+func (m Mob) UseAbility(ctx *Context) {
 	if m.Ability != nil {
-		m.Ability()
+		m.Ability(ctx)
 	}
 }
 
