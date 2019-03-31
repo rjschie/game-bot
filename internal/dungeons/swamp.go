@@ -51,42 +51,42 @@ func addBosses(s *gamebot.Dungeon) {
 }
 
 func addMobs(s *gamebot.Dungeon) {
-	appendMob(s, 5, gamebot.Mob{
+	AppendMob(s, 5, gamebot.Mob{
 		Name:   "Cocka Roach",
 		Health: 2,
 		Attack: 1,
 		XP:     1,
 	})
 
-	appendMob(s, 2, gamebot.Mob{
+	AppendMob(s, 2, gamebot.Mob{
 		Name:   "Thieves",
 		Health: 4,
 		Attack: 3,
 		XP:     3,
 	})
 
-	appendMob(s, 2, gamebot.Mob{
+	AppendMob(s, 2, gamebot.Mob{
 		Name:   "Goblin",
 		Health: 3,
 		Attack: 3,
 		XP:     2,
 	})
 
-	appendMob(s, 3, gamebot.Mob{
+	AppendMob(s, 3, gamebot.Mob{
 		Name:   "Rats",
 		Health: 2,
 		Attack: 2,
 		XP:     1,
 	})
 
-	appendMob(s, 3, gamebot.Mob{
+	AppendMob(s, 3, gamebot.Mob{
 		Name:   "Spider",
 		Health: 1,
 		Attack: 3,
 		XP:     1,
 	})
 
-	appendMob(s, 2, gamebot.Mob{
+	AppendMob(s, 2, gamebot.Mob{
 		Name:   "Vagrant",
 		Health: 4,
 		Attack: 2,
@@ -95,7 +95,7 @@ func addMobs(s *gamebot.Dungeon) {
 }
 
 func addModifiers(s *gamebot.Dungeon) {
-	appendModifier(s, 5, gamebot.Modifier{
+	AppendModifier(s, 5, gamebot.Modifier{
 		Name: "Reinforcements",
 		Type: "Encounter",
 		Ability: func() {
@@ -103,7 +103,7 @@ func addModifiers(s *gamebot.Dungeon) {
 		},
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Trip Wire",
 		Type: "Encounter",
 		Ability: func() {
@@ -111,7 +111,7 @@ func addModifiers(s *gamebot.Dungeon) {
 		},
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Spider Web",
 		Type: "Encounter",
 		Ability: func() {
@@ -119,7 +119,7 @@ func addModifiers(s *gamebot.Dungeon) {
 		},
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Spikes",
 		Type: "Encounter",
 		Ability: func() {
@@ -127,7 +127,7 @@ func addModifiers(s *gamebot.Dungeon) {
 		},
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Pile o' Poo",
 		Type: "Encounter",
 		Ability: func() {
@@ -135,7 +135,7 @@ func addModifiers(s *gamebot.Dungeon) {
 		},
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Cave-in",
 		Type: "Encounter",
 		Ability: func() {
@@ -143,47 +143,33 @@ func addModifiers(s *gamebot.Dungeon) {
 		},
 	})
 
-	appendModifier(s, 3, gamebot.Modifier{
+	AppendModifier(s, 3, gamebot.Modifier{
 		Name: "Lucky Charm",
 		Type: "Modifier",
 	})
 
-	appendModifier(s, 3, gamebot.Modifier{
+	AppendModifier(s, 3, gamebot.Modifier{
 		Name: "Bone Armor",
 		Type: "Modifier",
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Club",
 		Type: "Modifier",
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Poison",
 		Type: "Modifier",
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Net",
 		Type: "Modifier",
 	})
 
-	appendModifier(s, 1, gamebot.Modifier{
+	AppendModifier(s, 1, gamebot.Modifier{
 		Name: "Shiv",
 		Type: "Modifier",
 	})
-}
-
-func appendMob(d *gamebot.Dungeon, num int, m gamebot.Mob) *gamebot.Dungeon {
-	for i := 0; i < num; i++ {
-		d.Mobs = append(d.Mobs, m)
-	}
-	return d
-}
-
-func appendModifier(d *gamebot.Dungeon, num int, m gamebot.Modifier) *gamebot.Dungeon {
-	for i := 0; i < num; i++ {
-		d.Modifiers = append(d.Modifiers, m)
-	}
-	return d
 }
