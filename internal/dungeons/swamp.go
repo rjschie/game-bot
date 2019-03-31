@@ -9,14 +9,14 @@ import (
 )
 
 // NewSwamp .
-func NewSwamp() *gamebot.Dungeon {
-	s := new(gamebot.Dungeon)
+func NewSwamp() gamebot.Dungeon {
+	s := gamebot.Dungeon{}
 	s.Name = "Swamp"
 	s.Level = 1
 
-	addBosses(s)
-	addMobs(s)
-	addModifiers(s)
+	addBosses(&s)
+	addMobs(&s)
+	addModifiers(&s)
 
 	s.ShuffleMobs()
 	s.ShuffleModifiers()

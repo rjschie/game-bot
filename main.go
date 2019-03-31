@@ -9,9 +9,11 @@ func main() {
 	heroes := []gamebot.Hero{
 		gamebot.NewHero("Player 1"),
 	}
-	dungeon := dungeons.NewSwamp()
+	dungeons := []gamebot.Dungeon{
+		dungeons.NewSwamp(),
+	}
 
-	ctx := gamebot.NewContext(heroes, dungeon)
+	ctx := gamebot.NewContext(heroes, dungeons)
 
 	ctx.CurrentDungeon.ShowDeck()
 }
